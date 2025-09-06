@@ -12,7 +12,7 @@ const app = express();
 // ✅ Only ONE cors() with correct config
 app.use(
     cors({
-        origin: process.env.ALLOWED_ORIGIN?.split(",") || ["http://localhost:5173"],
+        origin: process.env.ALLOWED_ORIGIN?.split(","),
         credentials: true,
     })
 );

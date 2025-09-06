@@ -10,12 +10,11 @@ dotenv.config();
 const app = express();
 
 // ✅ Only ONE cors() with correct config
-app.use(
-    cors({
-        origin: process.env.ALLOWED_ORIGIN?.split(","),
-        credentials: true,
-    })
-);
+app.use(cors({
+  origin: 'https://cache2k25-register.vercel.app',  // frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
 
 app.use(express.json({ limit: "10mb" }));
 

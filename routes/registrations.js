@@ -44,11 +44,11 @@ router.post("/", upload.single("paymentProof"), async (req, res) => {
         } = req.body;
 
         // Validate UTR (12 digits)
-        if (!/^\d{12}$/.test(utr)) {
-            return res
-                .status(400)
-                .json({ message: "Invalid UTR number (must be 12 digits)" });
-        }
+        // if (!/^\d{12}$/.test(utr)) {
+        //     return res
+        //         .status(400)
+        //         .json({ message: "Invalid UTR number (must be 12 digits)" });
+        // }
 
         // Validate phone (10 digits)
         if (!/^\d{10}$/.test(paymentPhone)) {
